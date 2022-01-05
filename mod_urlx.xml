@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="administrator" method="upgrade">
+	<name>MOD_URLX</name>
+	<creationDate>1/5/2022</creationDate>
+	<author>MOD_URLX_XML_AUTHOR_NAME</author>
+	<authorEmail>109.marzouk@gmail.com</authorEmail>
+	<authorUrl>https://github.com/109-marzouk</authorUrl>
+	<copyright>Copyrights Reserved</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>MOD_URLX_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_urlx">mod_urlx.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>mod_urlx.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+
+	<!-- Update servers -->
+	<updateservers>
+		<!-- TODO:: Change the url -->
+		<server type="extension" priority="1" name="urlx">https://www.example.com/mod_urlx.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="url"
+					type="url"
+					label="MOD_URLX_URL_LABEL"
+					description="MOD_URLX_URL_DESCRIPTION"
+					hint="https://www.example.com"
+					filter="url"
+					validate="url"
+				/>
+				<field
+						name="key1"
+						type="text"
+						label="MOD_URLX_URL_FIRST_KEY_LABEL"
+						description="MOD_URLX_URL_FIRST_KEY_DESCRIPTION"
+						hint="key1"
+						filter="raw"
+				/>
+				<field
+						name="value1"
+						type="text"
+						label="MOD_URLX_URL_FIRST_VALUE_LABEL"
+						description="MOD_URLX_URL_FIRST_VALUE_DESCRIPTION"
+						hint="The value of the first key."
+						filter="raw"
+				/>
+				<field
+						name="key2"
+						type="text"
+						label="MOD_URLX_URL_SECOND_KEY_LABEL"
+						description="MOD_URLX_URL_SECOND_KEY_DESCRIPTION"
+						hint="key2"
+						filter="raw"
+				/>
+				<field
+						name="value2"
+						type="text"
+						label="MOD_URLX_URL_SECOND_VALUE_LABEL"
+						description="MOD_URLX_URL_SECOND_VALUE_DESCRIPTION"
+						hint="The value of the second key."
+						filter="raw"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
